@@ -20,3 +20,4 @@ mec-6.4.1.data-wrangling-at-scale-with-spark/NASA_access_log_Aug95.txt
 mec-6.4.1.data-wrangling-at-scale-with-spark/NASA_access_log_Jul95.txt
 mec-6.4.1.data-wrangling-at-scale-with-spark/NASA_access_log_Jul95.gz
 mec-6.4.1.data-wrangling-at-scale-with-spark/NASA_access_log_Aug95.gz
+*.gz
