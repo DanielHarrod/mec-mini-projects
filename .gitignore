@@ -16,3 +16,7 @@ Thumbs.db
 .vscode/*
 .env/*
 mec-3.4.1-api-mini-project/.env
+mec-6.4.1.data-wrangling-at-scale-with-spark/NASA_access_log_Aug95.txt
+mec-6.4.1.data-wrangling-at-scale-with-spark/NASA_access_log_Jul95.txt
+mec-6.4.1.data-wrangling-at-scale-with-spark/NASA_access_log_Jul95.gz
+mec-6.4.1.data-wrangling-at-scale-with-spark/NASA_access_log_Aug95.gz
