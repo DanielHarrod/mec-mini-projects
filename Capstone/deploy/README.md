@@ -93,6 +93,31 @@ curl -X POST "http://localhost:8000/predict" -H "accept: application/json" -H "C
 curl -X POST "http://localhost:8000/predict" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"data\":[[2,1,1,0,1,0,0,0,4,2,1,1,0,5,2,5,0,1,0,1,1,1,11,1,1]]}"
 ```
 
+## Setting up sphinx
+```
+(base) C:\Springboard\mec-mini-projects\Capstone\deploy>mkdir docs
+cd docs
+sphinx-quickstart 
+(Accept defaults)
+
+cd C:\Springboard\mec-mini-projects\Capstone\deploy>
+sphinx-apidoc -o docs .
+
+(base) C:\Springboard\mec-mini-projects\Capstone\deploy>sphinx-apidoc -o docs .
+Creating file docs\api.rst.
+Creating file docs\api.ml.rst.
+Creating file docs\api.tests.rst.
+Creating file docs\api.tests.api.rst.
+Creating file docs\src.rst.
+Creating file docs\modules.rst.
+
+added extensions to conf.py, added abs path to conf.py, added phinx_rtd_theme
+
+Goto
+(base) C:\Springboard\mec-mini-projects\Capstone\deploy\docs>
+
+make html
+```
 <!-- 
 
 Note: Good stuff in here I might need it.

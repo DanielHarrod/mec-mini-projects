@@ -99,6 +99,16 @@ app = FastAPI()
 
 @app.post("/predict", response_model=PredictResponse)
 def predict(input: PredictRequest, model: Model = Depends(get_model)):
+    """
+    Returns an integer 0 for negative prediction for diabetes, and 1 for positive prediction for diabets.
+    
+    :param Array[int]: Array of 20 integers - BMI [0], Smoker[1], Stroke[2], Asthma[3],Physical Activity[4], Heavy Drinking[5], cost[6], Health Care Insurance[7], General Health[8],  Health[9], Health[10], Difficulty Walking[11], Gender[12], age[13], education[14], income[15], race[16], routine_checkup[17], sleep_time[18], Heart_related[19]
+    :type Array[int]: integers
+    :raise ValueException for missing or out of range parameters
+    :return: 0 for negative and 1 for positive
+    :rtype: array[int]
+    """
+
     X = np.array(input.data)
     y_pred = model.predict(X)
     result = PredictResponse(data=y_pred.tolist())
