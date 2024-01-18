@@ -118,6 +118,9 @@ Goto
 
 make html
 ```
+
+## Quick Start notebook.
+See quick-start.ipynb shows how to run docker container and call the api with options.
 <!-- 
 
 Note: Good stuff in here I might need it.
