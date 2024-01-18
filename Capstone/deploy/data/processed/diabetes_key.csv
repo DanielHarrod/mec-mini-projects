@@ -1,0 +1,39 @@
+ColumnName,factors
+diabetes,"Index(['No', 'Yes'], dtype='object')"
+bmi,"Index(['Overweight', 'Normal', 'Obese', 'Under'], dtype='object')"
+smoker,"Index(['No', 'Some', 'Current', 'Former'], dtype='object')"
+stroke,"Index(['No', 'Yes'], dtype='object')"
+asthma,"Index(['Never', 'Current', 'Former'], dtype='object')"
+physical_activity,"Index(['No', 'Yes'], dtype='object')"
+heavy_drinking,"Index(['Yes', 'No'], dtype='object')"
+no_doctor_due_to_cost,"Index(['No', 'Yes'], dtype='object')"
+any_healthcare_insurance,"Index(['Medicare', 'Employer', 'Military', 'Private', 'Medigap', 'Other',
+       'Medicaid', 'No', 'State', 'Indian', 'CHIP'],
+      dtype='object')"
+general_health_status,"Index(['Excellent', 'Very good', 'Fair', 'Good', 'Poor', 'Don’t know'], dtype='object')"
+mental_health_status,"Index(['0', '1-13', '14+'], dtype='object')"
+physical_health_status,"Index(['0', '1-13', '14+'], dtype='object')"
+difficulty_walking,"Index(['No', 'Yes', 'Don’t know'], dtype='object')"
+gender,"Index(['Female', 'Male'], dtype='object')"
+age,"Index(['80 or older', '55 to 59', '40 to 44', '70 to 74', '65 to 69',
+       '60 to 64', '75 to 79', '50 to 54', '45 to 49', '35 to 39', '25 to 29',
+       '30 to 34', '18 to 24'],
+      dtype='object')"
+education,"Index(['High School', 'Graduated College', 'Some College', 'Middle School'], dtype='object')"
+income,"Index(['$25,000 to < $35,000', '$100,000 to < $200,000',
+       '$50,000 to < $100,000', '$35,000 to < $50,000', '< $15,000',
+       '$15,000 to < $25,000', '> $200,000'],
+      dtype='object')"
+race,"Index(['White', 'Black or African American',
+       'American Indian or Alaskan Native',
+       'Native Hawaiian or other Pacific Islander', 'Asian', 'Don’t know',
+       'Multiracial', 'No race'],
+      dtype='object')"
+routine_checkup,"Index(['Never', 'Within Last Year', 'Last 2 Years', 'Last 5 Years',
+       '5 or more years'],
+      dtype='object')"
+sleep_time,"Index(['6.0', '5.0', '9.0', '7.0', '8.0', '4.0', '10.0', '1.0', '18.0', '12.0',
+       '3.0', '2.0', '11.0', '13.0', '15.0', '16.0', '14.0', '23.0', '20.0',
+       '17.0', '22.0', '24.0', '19.0'],
+      dtype='object')"
+heart_related,"Index(['No', 'Yes'], dtype='object')"
