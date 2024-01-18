@@ -1,14 +1,12 @@
-# Assignment 24.6 and 27.4 (combined)
+# Assignment 24.6 
 
-## todo: I haven't included the how to deploy to AWS part, I'll add it later when I submit 27.4
-
-## 24.6 - Folder overview
+## 24.6 - Part 1 Folder overview
 - src\data - has external, preprocessed, and processed data(with key)
 - src\features - data preprocessing and data feature processing
 - src\models - trains the model and saves to the api folder
 - src\visualization - future
 
-## 27.4 - Folder overview
+## 24.6 - Part 2 Folder overview
 - \ - docker container and configuration
 - api- web service code using fastapi
 - api\ml - model pickle file and model class used by api
@@ -53,7 +51,7 @@ cd api\ml
 python model.py
 ```
 
-## Project setup for 27.4
+## Project setup for 24.6 - Part 2 
 1. Run Docker Desktop
 2. conda activate (base)
 3. cd deploy\src\models
