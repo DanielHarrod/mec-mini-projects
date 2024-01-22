@@ -1,17 +1,33 @@
-# Assignment 24.6 
+# Diabetes Capstone
 
-## 24.6 - Part 1 Folder overview
-- src\data - has external, preprocessed, and processed data(with key)
-- src\features - data preprocessing and data feature processing
+## Folder overview
+- data - has external, preprocessed, and processed data(with key)
+  - \external - Place the LLCP2002.XPT.zip file in this location, this contains 328 features from the telephone surveys/.
+  - \preprocessed - Contains a zip file with diabetes.csv.zip containing 21 selected features.
+  - \processed - Contains a zip file with diabetes.csv.zip containing the factorized data used in the predictions, and the diabetes_key.csv file containing the category keys.
+- src\data - contains the preprocessing and make_dataset source files.
+  - make_dataset.py run from command line to generate preprocessing files.
+  - preprocessing.py used by make_dataset to read/transform/save a preprocessed file.
+- src\features - contains the py files for data preprocessing and feature processing.
+  - build_features.py - run from command line to generate the processed files.
+  - featureprocessing.py - used by build_features to read/transform/save a processed file and key file.
+  - fp.ipynb - Used to generate py code to do validation and unit test.
+  - test_feature_processing.py - used to test input and output files, label validation, encoding, and min max ranges for categorical fields.
 - src\models - trains the model and saves to the api folder
+  - train_model.py - used to train and save a model that will be deployed to the docker container.
 - src\visualization - future
-
-## 24.6 - Part 2 Folder overview
 - \ - docker container and configuration
+  - docker-compose.yaml - sets up the servcies and network.
+  - dockerfile - sets the python version, source directory, requirements.txt, installs and updates pythong, sets environemnt variables, runs a uvicorn host.
+  - quick_start.ipynb - a notebook to quickly install, deploy and test the api.
+  - README.md - This document
+  - requirements.txt - python pacakages used.
 - api- web service code using fastapi
-- api\ml - model pickle file and model class used by api
+  - \ml - model pickle file and model class used by api
+- gcp_testing - contains a notebook to test positive, negative, and error cases for the gcp deployment
+- docs - contains basic api documentation
 
-## Project setup for 24.6
+## Project setup
 1. Acquire original src file from CDC Website, LLCP2022.XPT.zip 
    - https://www.cdc.gov/brfss/annual_data/annual_2022.html
 2. Store file in \data\external\ folder
@@ -65,6 +81,7 @@ python model.py
 
 
 ## Deployed Test Samples
+To test with GCP substitute localhost:8000 with gcp address
 ### Negative Test
 ```
 curl -X POST "http://localhost:8000/predict" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"data\":[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]}"
@@ -121,6 +138,20 @@ make html
 
 ## Quick Start notebook.
 See quick-start.ipynb shows how to run docker container and call the api with options.
+
+## GCP Deployment
+```
+gcloud auth login
+
+gcloud config set project $gcp_project_id
+
+gcloud auth configure-docker us-central1-docker.pkg.dev
+
+docker tag deploy-fastapi-capstone us-central1-docker.pkg.dev/$gcp_project_id/deploy-fastapi-capstone-repository/deploy-fastapi-capstone:1.0
+
+docker push us-central1-docker.pkg.dev/$gcp_project_id/deploy-fastapi-capstone-repository/deploy-fastapi-capstone:1.0
+
+```
 <!-- 
 
 Note: Good stuff in here I might need it.
