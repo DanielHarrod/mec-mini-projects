@@ -1,5 +1,21 @@
 # Diabetes Capstone
 
+## Overview
+
+According to the WHO almost 529 million people world wide have diabetes, contributing to 1.5 million deaths directly attributed to diabetes.  According to healthdata.org by 2050 global diabetes cases are predicted to increase to 13 billion poeople world wide.
+
+This project seeks to use machine learning models to predict diabetes based on environmental, economic, social, and health factors.
+
+The Behavioral Risk Factor Surveillance System (BRFSS) is a collaborative project between all the states
+in the United States and participating US territories and the Centers for Disease Control and Prevention
+(CDC).
+
+This project uses a small subset of the data collected from BRFSS predict diabetes.
+
+Key features are selected, the data is cleaned and categorized, a model is stored and deployed to an API endpoint.
+
+This file provides information on where to locate individual project files and steps needed to build, test, and deploy the trained model.
+
 ## Folder overview
 - data - has external, preprocessed, and processed data(with key)
   - \external - Place the LLCP2002.XPT.zip file in this location, this contains 328 features from the telephone surveys/.
