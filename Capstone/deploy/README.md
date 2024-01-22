@@ -67,7 +67,7 @@ cd api\ml
 python model.py
 ```
 
-## Project setup for 24.6 - Part 2 
+## Download and build docker container
 1. Run Docker Desktop
 2. conda activate (base)
 3. cd deploy\src\models
